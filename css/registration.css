@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(135deg, #D2E0FB, #FEF9D9);
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #8EACCD, #4b86b4);
+    color: #ffffff;
+    padding: 1em 2em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5em;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+main {
+    padding: 2em;
+}
+
+/* Registration Form Section */
+section.animated-section {
+    background: #DEE5D4;
+    border-radius: 10px;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    animation: fadeInUp 1s forwards;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #2a4d69;
+}
+
+/* Form Styling */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.registration-form label {
+    font-size: 1.1em;
+    color: #2a4d69;
+}
+
+.registration-form input {
+    padding: 0.8em;
+    border-radius: 5px;
+    border: 1px solid #8EACCD;
+    font-size: 1em;
+    transition: box-shadow 0.3s ease;
+}
+
+.registration-form input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Button Styling */
+section button {
+    background: linear-gradient(135deg, #8EACCD, #D2E0FB);
+    color: #ffffff;
+    border: none;
+    padding: 0.75em 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section button:hover {
+    background: linear-gradient(135deg, #D2E0FB, #8EACCD);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #8EACCD, #4b86b4);
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,230 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #D2E0FB; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8EACCD; /* Blue for hover effects */
+}
+
+/* Header */
+header {
+    background-color: #8EACCD; /* Medium blue header */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    /* background-image: url('https://via.placeholder.com/1200x600?text=Success+Stories'); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #000000;
+    padding: 100px 20px;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #8EACCD; /* Medium blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #6A8BCC; /* Darker blue on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 60px 20px;
+    background-color: #FEF9D9; /* Light cream background */
+}
+
+.success-stories .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.story-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.story-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+}
+
+.story-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.story-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.story-card .cta-button {
+    background-color: #8EACCD; /* Medium blue button */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card .cta-button:hover {
+    background-color: #6A8BCC; /* Darker blue on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #8EACCD; /* Medium blue footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+footer p {
+    flex: 1;
+    text-align: left;
+}
+
+footer .social-links {
+    flex: 1;
+    text-align: right;
+}
+
+footer .social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social-links li a img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+footer .social-links li a img:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .story-list {
+        flex-direction: column;
+    }
+
+    .story-card {
+        flex: 1 1 100%;
+    }
+
+    footer p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer .social-links {
+        text-align: center;
+    }
+}

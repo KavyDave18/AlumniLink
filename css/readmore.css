@@ -1,0 +1,170 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #D2E0FB; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Header */
+header {
+    background-color: #8EACCD; /* Medium blue header */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    /* background-image: url('https://via.placeholder.com/1200x600?text=Hero+Background'); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #000000;
+    padding: 100px 20px;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    background-color: #FEF9D9; /* Light cream background */
+}
+
+.section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section .content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.section .content p {
+    margin-bottom: 30px;
+}
+
+.section .image {
+    flex: 1;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.section .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hover zoom effect on images */
+.zoom-in:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #8EACCD; /* Medium blue footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    flex: 1;
+    text-align: left;
+}
+
+footer .social-links {
+    flex: 1;
+    text-align: right;
+}
+
+footer .social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social-links li a img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+footer .social-links li a img:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .section .container {
+        flex-direction: column;
+    }
+
+    .section .content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    footer p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer .social-links {
+        text-align: center;
+    }
+}
