@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - AlumniLink</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/community.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">A</div>
+          <h1>AlumniLink</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html" class="active">Community</a></li>
+            <li><a href="messages.html">Messages</a></li>
+          </ul>
+        </nav>
+        <div class="user-actions">
+          <button class="btn-icon message-btn">
+            <i class="fas fa-comment"></i>
+            <span>Messages</span>
+          </button>
+          <div class="user-avatar" id="profileDropdownBtn">JS</div>
+          <!-- Profile Dropdown Menu -->
+          <div class="profile-dropdown" id="profileDropdown">
+            <ul>
+              <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+              <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+              <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+              <li><a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Community</h1>
+      <p>Connect, share, and learn with fellow students and alumni.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="community-layout">
+        <!-- Left Sidebar -->
+        <aside class="community-sidebar">
+          <div class="section-card">
+            <div class="user-profile-card">
+              <div class="user-avatar-large">JS</div>
+              <h3>John Smith</h3>
+              <p>Computer Science Student</p>
+              <div class="user-stats">
+                <div class="stat-item">
+                  <span class="stat-value">24</span>
+                  <span class="stat-label">Connections</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">8</span>
+                  <span class="stat-label">Groups</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">12</span>
+                  <span class="stat-label">Posts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="card-header">
+              <h3>My Groups</h3>
+              <button class="btn btn-text">See All</button>
+            </div>
+            <div class="groups-list">
+              <a href="#" class="group-item">
+                <div class="group-icon tech">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="group-info">
+                  <h4>Tech Enthusiasts</h4>
+                  <p>1,245 members</p>
+                </div>
+              </a>
+              <a href="#" class="group-item">
+                <div class="group-icon career">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="group-info">
+                  <h4>Career Development</h4>
+                  <p>876 members</p>
+                </div>
+              </a>
+              <a href="#" class="group-item">
+                <div class="group-icon alumni">
+                  <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="group-info">
+                  <h4>Class of 2023</h4>
+                  <p>532 members</p>
+                </div>
+              </a>
+              <a href="#" class="group-item">
+                <div class="group-icon hackathon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="group-info">
+                  <h4>Hackathon Club</h4>
+                  <p>348 members</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-outline btn-sm">
+                <i class="fas fa-plus"></i> Create New Group
+              </button>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="card-header">
+              <h3>Trending Topics</h3>
+            </div>
+            <div class="trending-topics">
+              <a href="#" class="topic-item">
+                <span class="topic-name">#TechInternships</span>
+                <span class="topic-count">245 posts</span>
+              </a>
+              <a href="#" class="topic-item">
+                <span class="topic-name">#CareerAdvice</span>
+                <span class="topic-count">189 posts</span>
+              </a>
+              <a href="#" class="topic-item">
+                <span class="topic-name">#AlumniSpotlight</span>
+                <span class="topic-count">156 posts</span>
+              </a>
+              <a href="#" class="topic-item">
+                <span class="topic-name">#GradSchool</span>
+                <span class="topic-count">124 posts</span>
+              </a>
+              <a href="#" class="topic-item">
+                <span class="topic-name">#NetworkingTips</span>
+                <span class="topic-count">98 posts</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Create Post -->
+          <div class="section-card">
+            <div class="create-post">
+              <div class="post-input-container">
+                <div class="user-avatar-small">JS</div>
+                <div class="post-input">
+                  <input type="text" placeholder="Share something with the community..." id="postInput">
+                </div>
+              </div>
+              <div class="post-actions">
+                <button class="post-action-btn">
+                  <i class="fas fa-image"></i>
+                  <span>Photo</span>
+                </button>
+                <button class="post-action-btn">
+                  <i class="fas fa-video"></i>
+                  <span>Video</span>
+                </button>
+                <button class="post-action-btn">
+                  <i class="fas fa-link"></i>
+                  <span>Link</span>
+                </button>
+                <button class="post-action-btn">
+                  <i class="fas fa-poll"></i>
+                  <span>Poll</span>
+                </button>
+                <button class="btn btn-primary" id="createPostBtn">Post</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feed Filters -->
+          <div class="feed-filters">
+            <button class="feed-filter active" data-filter="all">All Posts</button>
+            <button class="feed-filter" data-filter="trending">Trending</button>
+            <button class="feed-filter" data-filter="following">Following</button>
+            <div class="feed-sort">
+              <label>Sort by:</label>
+              <select id="feedSort">
+                <option value="recent">Most Recent</option>
+                <option value="popular">Most Popular</option>
+                <option value="discussed">Most Discussed</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Posts Feed -->
+          <div class="posts-feed" id="postsFeed">
+            <!-- Post 1 -->
+            <div class="post-card">
+              <div class="post-header">
+                <div class="post-author">
+                  <div class="user-avatar-small">SK</div>
+                  <div class="author-info">
+                    <h4>Sarah Kim</h4>
+                    <p>Software Engineer at Google • 2h ago</p>
+                  </div>
+                </div>
+                <div class="post-menu">
+                  <button class="btn-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="post-content">
+                <p>Excited to announce that we're hiring summer interns for our engineering team! If you're interested in working on cutting-edge technology and gaining valuable industry experience, check out the job posting on the Jobs page. Feel free to message me if you have any questions!</p>
+                <div class="post-tags">
+                  <span class="post-tag">#Internships</span>
+                  <span class="post-tag">#TechJobs</span>
+                  <span class="post-tag">#SummerOpportunities</span>
+                </div>
+              </div>
+              <div class="post-stats">
+                <span><i class="fas fa-thumbs-up"></i> 45 likes</span>
+                <span><i class="fas fa-comment"></i> 12 comments</span>
+                <span><i class="fas fa-share"></i> 8 shares</span  12 comments</span>
+                <span><i class="fas fa-share"></i> 8 shares</span>
+              </div>
+              <div class="post-actions">
+                <button class="post-action-btn like-btn" data-id="1">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>Like</span>
+                </button>
+                <button class="post-action-btn comment-btn" data-id="1">
+                  <i class="far fa-comment"></i>
+                  <span>Comment</span>
+                </button>
+                <button class="post-action-btn share-btn" data-id="1">
+                  <i class="far fa-share-square"></i>
+                  <span>Share</span>
+                </button>
+              </div>
+              <div class="post-comments">
+                <div class="comment-input">
+                  <div class="user-avatar-small">JS</div>
+                  <input type="text" placeholder="Write a comment..." class="comment-text">
+                  <button class="btn-icon send-comment-btn">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+                <div class="comments-list">
+                  <div class="comment-item">
+                    <div class="user-avatar-small">MP</div>
+                    <div class="comment-content">
+                      <div class="comment-author">
+                        <h5>Michael Park</h5>
+                        <span>30m ago</span>
+                      </div>
+                      <p>This sounds like an amazing opportunity! What kind of skills are you looking for in candidates?</p>
+                      <div class="comment-actions">
+                        <button class="btn-text">Like</button>
+                        <button class="btn-text">Reply</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="comment-item">
+                    <div class="user-avatar-small">SK</div>
+                    <div class="comment-content">
+                      <div class="comment-author">
+                        <h5>Sarah Kim</h5>
+                        <span>25m ago</span>
+                      </div>
+                      <p>We're looking for strong programming skills (particularly in Java or Python), problem-solving abilities, and good communication. Experience with web technologies is a plus!</p>
+                      <div class="comment-actions">
+                        <button class="btn-text">Like</button>
+                        <button class="btn-text">Reply</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post-card">
+              <div class="post-header">
+                <div class="post-author">
+                  <div class="user-avatar-small">DP</div>
+                  <div class="author-info">
+                    <h4>David Patel</h4>
+                    <p>UX Designer at Apple • 5h ago</p>
+                  </div>
+                </div>
+                <div class="post-menu">
+                  <button class="btn-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="post-content">
+                <p>Just wrapped up a design workshop with some amazing students from our alma mater. It's always inspiring to see the fresh perspectives and innovative ideas from the next generation of designers!</p>
+                <div class="post-image">
+                  <img src="https://placehold.co/600x400" alt="Design Workshop">
+                </div>
+                <div class="post-tags">
+                  <span class="post-tag">#DesignWorkshop</span>
+                  <span class="post-tag">#MentorMoments</span>
+                  <span class="post-tag">#AlumniEngagement</span>
+                </div>
+              </div>
+              <div class="post-stats">
+                <span><i class="fas fa-thumbs-up"></i> 78 likes</span>
+                <span><i class="fas fa-comment"></i> 23 comments</span>
+                <span><i class="fas fa-share"></i> 15 shares</span>
+              </div>
+              <div class="post-actions">
+                <button class="post-action-btn like-btn" data-id="2">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>Like</span>
+                </button>
+                <button class="post-action-btn comment-btn" data-id="2">
+                  <i class="far fa-comment"></i>
+                  <span>Comment</span>
+                </button>
+                <button class="post-action-btn share-btn" data-id="2">
+                  <i class="far fa-share-square"></i>
+                  <span>Share</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="post-card">
+              <div class="post-header">
+                <div class="post-author">
+                  <div class="user-avatar-small">AA</div>
+                  <div class="author-info">
+                    <h4>Alumni Association</h4>
+                    <p>Official Account • 1d ago</p>
+                  </div>
+                </div>
+                <div class="post-menu">
+                  <button class="btn-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="post-content">
+                <p>📢 Announcing our Annual Alumni Reunion Weekend! Mark your calendars for June 24-26, 2023. We have an exciting lineup of events, including networking sessions, panel discussions, campus tours, and the gala dinner. Early bird registration is now open!</p>
+                <div class="post-image">
+                  <img src="https://placehold.co/600x300" alt="Alumni Reunion">
+                </div>
+                <div class="post-tags">
+                  <span class="post-tag">#AlumniReunion</span>
+                  <span class="post-tag">#ClassReunion</span>
+                  <span class="post-tag">#NetworkingEvent</span>
+                </div>
+              </div>
+              <div class="post-stats">
+                <span><i class="fas fa-thumbs-up"></i> 156 likes</span>
+                <span><i class="fas fa-comment"></i> 42 comments</span>
+                <span><i class="fas fa-share"></i> 67 shares</span>
+              </div>
+              <div class="post-actions">
+                <button class="post-action-btn like-btn" data-id="3">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>Like</span>
+                </button>
+                <button class="post-action-btn comment-btn" data-id="3">
+                  <i class="far fa-comment"></i>
+                  <span>Comment</span>
+                </button>
+                <button class="post-action-btn share-btn" data-id="3">
+                  <i class="far fa-share-square"></i>
+                  <span>Share</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="load-more">
+            <button class="btn btn-outline" id="loadMoreBtn">
+              <i class="fas fa-sync"></i> Load More Posts
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="community-sidebar right-sidebar">
+          <div class="section-card">
+            <div class="card-header">
+              <h3>Upcoming Events</h3>
+              <button class="btn btn-text">See All</button>
+            </div>
+            <div class="sidebar-events">
+              <a href="events.html" class="sidebar-event">
+                <div class="event-date">
+                  <span class="month">MAY</span>
+                  <span class="day">15</span>
+                </div>
+                <div class="event-info">
+                  <h4>Tech Career Panel</h4>
+                  <p><i class="fas fa-clock"></i> 3:00 PM - 5:00 PM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Virtual</p>
+                </div>
+              </a>
+              <a href="events.html" class="sidebar-event">
+                <div class="event-date">
+                  <span class="month">MAY</span>
+                  <span class="day">22</span>
+                </div>
+                <div class="event-info">
+                  <h4>Alumni Networking Mixer</h4>
+                  <p><i class="fas fa-clock"></i> 6:00 PM - 8:00 PM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Campus Center</p>
+                </div>
+              </a>
+              <a href="events.html" class="sidebar-event">
+                <div class="event-date">
+                  <span class="month">MAY</span>
+                  <span class="day">28</span>
+                </div>
+                <div class="event-info">
+                  <h4>Resume Workshop</h4>
+                  <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Virtual</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="card-header">
+              <h3>Suggested Connections</h3>
+            </div>
+            <div class="suggested-connections">
+              <div class="connection-item">
+                <div class="user-avatar-small">RJ</div>
+                <div class="connection-info">
+                  <h4>Rachel Johnson</h4>
+                  <p>Data Scientist at Amazon</p>
+                  <p class="mutual-connections">5 mutual connections</p>
+                </div>
+                <button class="btn btn-sm btn-outline connect-btn" data-id="101">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+              <div class="connection-item">
+                <div class="user-avatar-small">TN</div>
+                <div class="connection-info">
+                  <h4>Thomas Nguyen</h4>
+                  <p>Product Manager at Microsoft</p>
+                  <p class="mutual-connections">3 mutual connections</p>
+                </div>
+                <button class="btn btn-sm btn-outline connect-btn" data-id="102">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+              <div class="connection-item">
+                <div class="user-avatar-small">LW</div>
+                <div class="connection-info">
+                  <h4>Lisa Wang</h4>
+                  <p>Marketing Director at Netflix</p>
+                  <p class="mutual-connections">7 mutual connections</p>
+                </div>
+                <button class="btn btn-sm btn-outline connect-btn" data-id="103">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="discover.html" class="btn-text">View More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="card-header">
+              <h3>Latest Jobs</h3>
+              <button class="btn btn-text">See All</button>
+            </div>
+            <div class="sidebar-jobs">
+              <a href="jobs.html" class="sidebar-job">
+                <h4>Software Engineer Intern</h4>
+                <p>Tech Solutions Inc.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <span class="job-tag internship">Internship</span>
+              </a>
+              <a href="jobs.html" class="sidebar-job">
+                <h4>UX Designer</h4>
+                <p>Creative Designs Co.</p>
+                <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                <span class="job-tag full-time">Full-time</span>
+              </a>
+              <a href="jobs.html" class="sidebar-job">
+                <h4>Data Analyst</h4>
+                <p>Data Insights LLC</p>
+                <p><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                <span class="job-tag part-time">Part-time</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <h3>AlumniLink</h3>
+          </div>
+          <p>Connecting students with alumni for mentorship, career guidance, and opportunities.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="discover.html">Discover Alumni</a></li>
+            <li><a href="jobs.html">Jobs & Internships</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="hackathons.html">Hackathons</a></li>
+            <li><a href="alumni-map.html">Alumni Map</a></li>
+            <li><a href="help.html">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="copyright">© 2023 AlumniLink. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/community.js"></script>
+</body>
+</html>
