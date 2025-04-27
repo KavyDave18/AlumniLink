@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - AlumniLink</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">A</div>
+          <h1>AlumniLink</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="messages.html">Messages</a></li>
+          </ul>
+        </nav>
+        <div class="user-actions">
+          <button class="btn-icon message-btn">
+            <i class="fas fa-comment"></i>
+            <span>Messages</span>
+          </button>
+          <div class="user-avatar" id="profileDropdownBtn">JS</div>
+          <!-- Profile Dropdown Menu -->
+          <div class="profile-dropdown" id="profileDropdown">
+            <ul>
+              <li><a href="profile.html" class="active"><i class="fas fa-user"></i> My Profile</a></li>
+              <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+              <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+              <li><a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="profile-header">
+    <div class="container">
+      <div class="profile-header-content">
+        <div class="profile-avatar-container">
+          <div class="profile-avatar-large">JS</div>
+          <button class="edit-avatar-btn">
+            <i class="fas fa-edit"></i>
+          </button>
+        </div>
+        <div class="profile-info">
+          <h1>John Smith</h1>
+          <p class="profile-role">Computer Science Student</p>
+          <p class="profile-location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        </div>
+        <div class="profile-actions">
+          <button class="btn btn-outline" id="editProfileBtn">
+            <i class="fas fa-edit"></i>
+            <span id="editBtnText">Edit Profile</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="profile-tabs">
+        <button class="profile-tab active" data-tab="about">About</button>
+        <button class="profile-tab" data-tab="projects">Projects</button>
+        <button class="profile-tab" data-tab="experience">Experience</button>
+        <button class="profile-tab" data-tab="education">Education</button>
+      </div>
+
+      <div class="profile-content">
+        <!-- About Tab -->
+        <div class="profile-tab-content active" id="about-tab">
+          <div class="profile-grid">
+            <div class="profile-main">
+              <div class="section-card">
+                <div class="card-header">
+                  <h2>About Me</h2>
+                  <button class="btn btn-text edit-section-btn" data-section="about">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+                <div class="card-content">
+                  <p>Passionate computer science student with interests in web development, machine learning, and open-source projects. Looking for internship opportunities in software engineering.</p>
+                </div>
+              </div>
+
+              <div class="section-card">
+                <div class="card-header">
+                  <h2>Skills</h2>
+                  <button class="btn btn-text edit-section-btn" data-section="skills">
+                    <i class="fas fa-plus"></i> Add Skill
+                  </button>
+                </div>
+                <div class="card-content">
+                  <div class="skills-list">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-card">
+                <div class="card-header">
+                  <h2>Interests</h2>
+                  <button class="btn btn-text edit-section-btn" data-section="interests">
+                    <i class="fas fa-plus"></i> Add Interest
+                  </button>
+                </div>
+                <div class="card-content">
+                  <div class="interests-list">
+                    <span class="interest-tag">Web Development</span>
+                    <span class="interest-tag">Artificial Intelligence</span>
+                    <span class="interest-tag">Open Source</span>
+                    <span class="interest-tag">Hackathons</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-sidebar">
+              <div class="section-card">
+                <div class="card-header">
+                  <h2>Contact Information</h2>
+                  <button class="btn btn-text edit-section-btn" data-section="contact">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+                <div class="card-content">
+                  <div class="contact-info">
+                    <div class="contact-item">
+                      <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>john.smith@techunivers.edu</p>
+                      </div>
+                    </div>
+                    <div class="contact-item">
+                      <div class="contact-icon">
+                        <i class="fas fa-user"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h3>Student ID</h3>
+                        <p>TU2020CS123</p>
+                      </div>
+                    </div>
+                    <div class="contact-item">
+                      <div class="contact-icon">
+                        <i class="fas fa-briefcase"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h3>Year</h3>
+                        <p>3rd Year</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-card">
+                <div class="card-header">
+                  <h2>Social Profiles</h2>
+                  <button class="btn btn-text edit-section-btn" data-section="social">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+                <div class="card-content">
+                  <div class="social-profiles">
+                    <a href="https://github.com/johnsmith" class="social-profile-link">
+                      <i class="fab fa-github"></i>
+                      <span>github.com/johnsmith</span>
+                    </a>
+                    <a href="https://linkedin.com/in/johnsmith" class="social-profile-link">
+                      <i class="fab fa-linkedin"></i>
+                      <span>linkedin.com/in/johnsmith</span>
+                    </a>
+                    <a href="https://twitter.com/johnsmith" class="social-profile-link">
+                      <i class="fab fa-twitter"></i>
+                      <span>twitter.com/johnsmith</span>
+                    </a>
+                    <a href="https://johnsmith.dev" class="social-profile-link">
+                      <i class="fas fa-globe"></i>
+                      <span>johnsmith.dev</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-card">
+                <div class="card-header">
+                  <h2>Resume</h2>
+                </div>
+                <div class="card-content">
+                  <div class="resume-upload">
+                    <div class="resume-icon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <button class="btn btn-outline btn-sm">
+                      <i class="fas fa-upload"></i> Upload Resume
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div class="profile-tab-content" id="projects-tab">
+          <div class="add-new-card">
+            <div class="add-new-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <h3>Add New Project</h3>
+            <p>Showcase your work to alumni and potential employers</p>
+          </div>
+
+          <div class="projects-list">
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Personal Portfolio Website</h3>
+                <div class="project-actions">
+                  <button class="btn btn-text edit-project-btn" data-id="1">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+              </div>
+              <div class="project-content">
+                <p>A responsive portfolio website built with React and Tailwind CSS.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+                <a href="https://github.com/johnsmith/portfolio" class="project-link">
+                  <i class="fab fa-github"></i> View Project
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Weather App</h3>
+                <div class="project-actions">
+                  <button class="btn btn-text edit-project-btn" data-id="2">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+              </div>
+              <div class="project-content">
+                <p>A weather application that fetches data from a weather API and displays current conditions and forecasts.</p>
+                <div class="project-tags">
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">API Integration</span>
+                  <span class="project-tag">CSS</span>
+                </div>
+                <a href="https://github.com/johnsmith/weather-app" class="project-link">
+                  <i class="fab fa-github"></i> View Project
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Task Management System</h3>
+                <div class="project-actions">
+                  <button class="btn btn-text edit-project-btn" data-id="3">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+              </div>
+              <div class="project-content">
+                <p>A full-stack application for managing tasks and projects with user authentication.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">Express</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">React</span>
+                </div>
+                <a href="https://github.com/johnsmith/task-manager" class="project-link">
+                  <i class="fab fa-github"></i> View Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Tab -->
+        <div class="profile-tab-content" id="experience-tab">
+          <div class="add-new-card">
+            <div class="add-new-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <h3>Add Experience</h3>
+            <p>Add your work experience, internships, or volunteer work</p>
+          </div>
+
+          <div class="experience-list">
+            <div class="experience-card">
+              <div class="experience-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="experience-content">
+                <div class="experience-header">
+                  <h3>Web Development Intern</h3>
+                  <div class="experience-actions">
+                    <button class="btn btn-text edit-experience-btn" data-id="1">
+                      <i class="fas fa-edit"></i> Edit
+                    </button>
+                  </div>
+                </div>
+                <p class="experience-company">Tech Startup Inc.</p>
+                <p class="experience-period">Summer 2022</p>
+                <p class="experience-description">Developed and maintained features for the company's web application using React and Node.js.</p>
+              </div>
+            </div>
+
+            <div class="experience-card">
+              <div class="experience-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="experience-content">
+                <div class="experience-header">
+                  <h3>Teaching Assistant</h3>
+                  <div class="experience-actions">
+                    <button class="btn btn-text edit-experience-btn" data-id="2">
+                      <i class="fas fa-edit"></i> Edit
+                    </button>
+                  </div>
+                </div>
+                <p class="experience-company">Tech University</p>
+                <p class="experience-period">Fall 2021 - Present</p>
+                <p class="experience-description">Assist professors in teaching web development courses, grade assignments, and conduct office hours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Tab -->
+        <div class="profile-tab-content" id="education-tab">
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <div class="education-header">
+                <h3>Tech University</h3>
+                <div class="education-actions">
+                  <button class="btn btn-text edit-education-btn" data-id="1">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+              </div>
+              <p class="education-degree">Bachelor of Science in Computer Science</p>
+              <p class="education-period">2020 - 2024</p>
+              
+              <div class="education-courses">
+                <h4>Relevant Coursework:</h4>
+                <div class="course-tags">
+                  <span class="course-tag">Data Structures and Algorithms</span>
+                  <span class="course-tag">Web Development</span>
+                  <span class="course-tag">Machine Learning</span>
+                  <span class="course-tag">Database Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-new-card">
+            <div class="add-new-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <h3>Add Education</h3>
+            <p>Add additional education, certifications, or courses</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <h3>AlumniLink</h3>
+          </div>
+          <p>Connecting students with alumni for mentorship, career guidance,
