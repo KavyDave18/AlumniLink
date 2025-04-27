@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniLink - Connect with Alumni</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">A</div>
+          <h1>AlumniLink</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="messages.html">Messages</a></li>
+          </ul>
+        </nav>
+        <div class="user-actions">
+          <button class="btn-icon message-btn">
+            <i class="fas fa-comment"></i>
+            <span>Messages</span>
+          </button>
+          <a href="profile.html" class="profile-link">
+            <div class="user-avatar">JS</div>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Welcome back, <span class="highlight">John!</span></h1>
+            <p>Connect with alumni, discover opportunities, and build your professional network.</p>
+            <div class="hero-buttons">
+              <a href="discover.html" class="btn btn-primary">
+                <i class="fas fa-users"></i>
+                Discover Alumni
+              </a>
+              <a href="jobs.html" class="btn btn-outline">
+                <i class="fas fa-briefcase"></i>
+                Browse Jobs
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-blob"></div>
+            <img src="https://placehold.co/400x400" alt="Students connecting">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Connect with Alumni</h3>
+            <p>Discover and connect with alumni from your college working in your field of interest.</p>
+            <a href="discover.html" class="feature-link">
+              Explore Alumni <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Find Opportunities</h3>
+            <p>Explore job and internship opportunities posted by alumni from your college.</p>
+            <a href="jobs.html" class="feature-link green-link">
+              View Opportunities <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <i class="fas fa-calendar"></i>
+            </div>
+            <h3>Attend Events</h3>
+            <p>Join webinars, workshops, and meetups organized by alumni to enhance your skills.</p>
+            <a href="events.html" class="feature-link purple-link">
+              Browse Events <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="content-grid">
+          <div class="main-content">
+            <div class="section-card">
+              <div class="card-header">
+                <h2>Featured Alumni</h2>
+                <a href="discover.html" class="btn btn-text">View All</a>
+              </div>
+              <div class="alumni-grid">
+                <!-- Alumni Card 1 -->
+                <div class="alumni-card">
+                  <div class="alumni-info">
+                    <div class="alumni-avatar">
+                      <img src="https://placehold.co/100x100" alt="Sarah Johnson">
+                    </div>
+                    <div class="alumni-details">
+                      <h3>Sarah Johnson</h3>
+                      <p class="alumni-role">
+                        <i class="fas fa-briefcase"></i>
+                        Software Engineer at Google
+                      </p>
+                      <p class="alumni-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        San Francisco, CA
+                      </p>
+                      <div class="alumni-tags">
+                        <span class="tag">Tech</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Web Development</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alumni-actions">
+                    <button class="btn-action connect-btn" data-id="1">
+                      <i class="fas fa-user-plus"></i>
+                      Connect
+                    </button>
+                    <button class="btn-action message-btn">
+                      <i class="fas fa-comment"></i>
+                      Message
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Alumni Card 2 -->
+                <div class="alumni-card">
+                  <div class="alumni-info">
+                    <div class="alumni-avatar">
+                      <img src="https://placehold.co/100x100" alt="Michael Chen">
+                    </div>
+                    <div class="alumni-details">
+                      <h3>Michael Chen</h3>
+                      <p class="alumni-role">
+                        <i class="fas fa-briefcase"></i>
+                        Product Manager at Microsoft
+                      </p>
+                      <p class="alumni-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Seattle, WA
+                      </p>
+                      <div class="alumni-tags">
+                        <span class="tag">Product</span>
+                        <span class="tag">UX</span>
+                        <span class="tag">Strategy</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alumni-actions">
+                    <button class="btn-action connect-btn" data-id="2">
+                      <i class="fas fa-user-plus"></i>
+                      Connect
+                    </button>
+                    <button class="btn-action message-btn">
+                      <i class="fas fa-comment"></i>
+                      Message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-content">
+            <div class="section-card">
+              <div class="card-header">
+                <h2>Upcoming Events</h2>
+                <a href="events.html" class="btn btn-text">View All</a>
+              </div>
+              <div class="events-list">
+                <div class="event-item">
+                  <h3>Tech Career Panel</h3>
+                  <span class="event-tag">Webinar</span>
+                  <p class="event-detail">
+                    <i class="fas fa-calendar"></i>
+                    May 15, 2023
+                  </p>
+                  <p class="event-detail">
+                    <i class="fas fa-clock"></i>
+                    3:00 PM - 5:00 PM
+                  </p>
+                  <p class="event-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Virtual
+                  </p>
+                  <button class="btn btn-primary btn-sm rsvp-btn" data-id="1">RSVP</button>
+                </div>
+
+                <div class="event-item">
+                  <h3>Alumni Networking Mixer</h3>
+                  <span class="event-tag in-person">In-Person</span>
+                  <p class="event-detail">
+                    <i class="fas fa-calendar"></i>
+                    May 22, 2023
+                  </p>
+                  <p class="event-detail">
+                    <i class="fas fa-clock"></i>
+                    6:00 PM - 8:00 PM
+                  </p>
+                  <p class="event-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Campus Center
+                  </p>
+                  <button class="btn btn-primary btn-sm rsvp-btn" data-id="2">RSVP</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-card">
+              <div class="card-header">
+                <h2>Recent Jobs</h2>
+                <a href="jobs.html" class="btn btn-text">View All</a>
+              </div>
+              <div class="jobs-list">
+                <div class="job-item">
+                  <h3>Software Engineer Intern</h3>
+                  <span class="job-tag">Internship</span>
+                  <p class="job-detail">
+                    <i class="fas fa-building"></i>
+                    Tech Solutions Inc.
+                  </p>
+                  <p class="job-detail">
+                    <i class="fas fa-briefcase"></i>
+                    Remote
+                  </p>
+                  <p class="job-detail">
+                    <i class="fas fa-clock"></i>
+                    Posted 2 days ago
+                  </p>
+                  <a href="jobs.html" class="btn btn-outline btn-sm">Apply Now</a>
+                </div>
+
+                <div class="job-item">
+                  <h3>UX Designer</h3>
+                  <span class="job-tag full-time">Full-time</span>
+                  <p class="job-detail">
+                    <i class="fas fa-building"></i>
+                    Creative Designs Co.
+                  </p>
+                  <p class="job-detail">
+                    <i class="fas fa-briefcase"></i>
+                    New York, NY
+                  </p>
+                  <p class="job-detail">
+                    <i class="fas fa-clock"></i>
+                    Posted 1 week ago
+                  </p>
+                  <a href="jobs.html" class="btn btn-outline btn-sm">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <h3>AlumniLink</h3>
+          </div>
+          <p>Connecting students with alumni for mentorship, career guidance, and opportunities.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="discover.html">Discover Alumni</a></li>
+            <li><a href="jobs.html">Jobs & Internships</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="hackathons.html">Hackathons</a></li>
+            <li><a href="alumni-map.html">Alumni Map</a></li>
+            <li><a href="help.html">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="copyright">© 2023 AlumniLink. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Alumni Profile Modal -->
+  <div class="modal" id="alumniModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="alumni-profile">
+          <div class="profile-header">
+            <div class="profile-avatar">
+              <img src="https://placehold.co/100x100" alt="Alumni">
+            </div>
+            <div class="profile-info">
+              <h2 class="profile-name">Sarah Johnson</h2>
+              <p class="profile-role">Software Engineer at Google</p>
+              <p class="profile-location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+              <div class="profile-tags">
+                <span class="tag">Tech</span>
+                <span class="tag">AI</span>
+                <span class="tag">Web Development</span>
+              </div>
+            </div>
+          </div>
+          <div class="profile-actions">
+            <button class="btn btn-primary connect-btn" data-id="1">
+              <i class="fas fa-user-plus"></i>
+              Connect
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-comment"></i>
+              Message
+            </button>
+          </div>
+          <div class="profile-tabs">
+            <div class="tab-buttons">
+              <button class="tab-btn active" data-tab="about">About</button>
+              <button class="tab-btn" data-tab="experience">Experience</button>
+              <button class="tab-btn" data-tab="projects">Projects</button>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="about">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+              <div class="tab-pane" id="experience">
+                <h3>Experience</h3>
+                <div class="experience-item">
+                  <div class="experience-icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <div class="experience-details">
+                    <h4>Software Engineer</h4>
+                    <p>Google</p>
+                    <p class="experience-date">2020 - Present</p>
+                    <p>Working on various projects and initiatives related to tech solutions.</p>
+                  </div>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <div class="experience-details">
+                    <h4>Intern</h4>
+                    <p>Previous Company</p>
+                    <p class="experience-date">Summer 2020</p>
+                    <p>Worked on various projects as an intern, gaining valuable industry experience.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="projects">
+                <h3>Projects</h3>
+                <div class="project-item">
+                  <h4>Personal Portfolio Website</h4>
+                  <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
+                  <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                  </div>
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
+                <div class="project-item">
+                  <h4>Weather App</h4>
+                  <p>A weather application that fetches data from a weather API and displays current conditions and forecasts.</p>
+                  <div class="project-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">API Integration</span>
+                    <span class="tag">CSS</span>
+                  </div>
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
