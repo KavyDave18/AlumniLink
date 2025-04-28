@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumniLink - Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/profile-edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/alumnilink-logo.png" alt="AlumniLink Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="discover.html"><i class="fas fa-compass"></i> Discover</a></li>
+                <li><a href="messages.html"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+                <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                <li class="active"><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="profile-dropdown">
+                <img src="images/profile-pic.jpg" alt="Profile Picture">
+                <div class="dropdown-content">
+                    <a href="profile.html">View Profile</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-header">
+            <div class="profile-cover">
+                <div class="cover-gradient"></div>
+                <button class="edit-cover"><i class="fas fa-camera"></i> Edit Cover</button>
+            </div>
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="images/profile-pic.jpg" alt="Profile Picture">
+                    <div class="avatar-edit">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <h1>Sarah Johnson</h1>
+                    <p class="headline">Software Engineer | Class of 2020 | AI Enthusiast</p>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="count">256</span>
+                            <span class="label">Connections</span>
+                        </div>
+                        <div class="stat">
+                            <span class="count">42</span>
+                            <span class="label">Posts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="count">18</span>
+                            <span class="label">Events</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="primary-btn message-btn" onclick="window.location.href='messages.html'"><i class="fas fa-envelope"></i> Message</button>
+                        <button class="secondary-btn"><i class="fas fa-user-plus"></i> Connect</button>
+                        <button class="tertiary-btn"><i class="fas fa-share-alt"></i> Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-sidebar">
+                <div class="profile-card">
+                    <h3>About Me</h3>
+                    <p>Software Engineer with 3+ years of experience specializing in AI and machine learning. Graduated from Stanford University with a degree in Computer Science. Passionate about creating innovative solutions and mentoring junior developers.</p>
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Edit</button>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <div class="edu-logo">
+                            <img src="images/stanford-logo.png" alt="Stanford University">
+                        </div>
+                        <div class="edu-details">
+                            <h4>Stanford University</h4>
+                            <p>BS in Computer Science</p>
+                            <p class="edu-date">2016 - 2020</p>
+                        </div>
+                    </div>
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Edit</button>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Edit</button>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Languages</h3>
+                    <div class="language-item">
+                        <span>English</span>
+                        <div class="language-level">
+                            <div class="level-fill" style="width: 100%"></div>
+                        </div>
+                        <span class="level-text">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Spanish</span>
+                        <div class="language-level">
+                            <div class="level-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="level-text">Advanced</span>
+                    </div>
+                    <div class="language-item">
+                        <span>French</span>
+                        <div class="language-level">
+                            <div class="level-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="level-text">Intermediate</span>
+                    </div>
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Edit</button>
+                </div>
+            </div>
+
+            <div class="profile-main">
+                <div class="profile-card">
+                    <h3>Experience</h3>
+                    <div class="experience-item">
+                        <div class="exp-logo">
+                            <img src="images/google-logo.png" alt="Google">
+                        </div>
+                        <div class="exp-details">
+                            <h4>Software Engineer</h4>
+                            <p class="company">Google</p>
+                            <p class="exp-date">Jan 2021 - Present · 2 years 4 months</p>
+                            <p class="exp-location">Mountain View, CA</p>
+                            <p class="exp-description">Working on machine learning algorithms for Google Search. Developed features that improved search accuracy by 15%. Mentoring junior engineers and leading a team of 5 developers.</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="exp-logo">
+                            <img src="images/meta-logo.png" alt="Meta">
+                        </div>
+                        <div class="exp-details">
+                            <h4>Software Engineering Intern</h4>
+                            <p class="company">Meta</p>
+                            <p class="exp-date">May 2020 - Aug 2020 · 4 months</p>
+                            <p class="exp-location">Menlo Park, CA</p>
+                            <p class="exp-description">Worked on the News Feed team to develop algorithms for content recommendation. Implemented a feature that increased user engagement by 8%.</p>
+                        </div>
+                    </div>
+                    <button class="add-btn"><i class="fas fa-plus"></i> Add Experience</button>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <div class="project-image">
+                                <img src="images/project1.jpg" alt="AI Chatbot">
+                            </div>
+                            <div class="project-details">
+                                <h4>AI Chatbot for Customer Service</h4>
+                                <p>Developed an AI-powered chatbot that handles customer inquiries with 85% accuracy. Used TensorFlow and NLP techniques.</p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-image">
+                                <img src="images/project2.jpg" alt="Data Visualization">
+                            </div>
+                            <div class="project-details">
+                                <h4>Interactive Data Visualization Dashboard</h4>
+                                <p>Created a dashboard for visualizing complex datasets using D3.js and React. Used by over 500 researchers.</p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-btn"><i class="fas fa-plus"></i> Add Project</button>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Sarah</strong> started a new position as Software Engineer at Google</p>
+                                <span class="activity-time">2 years ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Sarah</strong> graduated from Stanford University</p>
+                                <span class="activity-time">3 years ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Sarah</strong> earned a new certification: AWS Certified Solutions Architect</p>
+                                <span class="activity-time">1 year ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/alumnilink-logo.png" alt="AlumniLink Logo">
+                <p>Connecting graduates to opportunities</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="messages.html">Messages</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Mentorship</a></li>
+                        <li><a href="#">Alumni Directory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 AlumniLink. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
