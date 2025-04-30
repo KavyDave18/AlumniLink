@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniLink - Messages</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/messages.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">A</div>
+          <h1>AlumniLink</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="messages.html" class="active">Messages</a></li>
+          </ul>
+        </nav>
+        <div class="user-actions">
+          <button class="btn-icon message-btn">
+            <i class="fas fa-comment"></i>
+            <span>Messages</span>
+          </button>
+          <a href="profile.html" class="profile-link">
+            <div class="user-avatar">JS</div>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header messages-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-text">
+          <h1 class="page-title">Messages</h1>
+          <p class="page-description">Connect with alumni through direct messages</p>
+        </div>
+        <div class="header-illustration">
+          <img src="images/messages-illustration.svg" alt="Messages Illustration">
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+        <path fill="#ffffff" fill-opacity="1" d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,80C1120,85,1280,75,1360,69.3L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+      </svg>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="messages-container" id="messagesContainer">
+      <!-- Conversations List -->
+      <div class="conversations-list" id="conversationsList">
+        <div class="conversations-header">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search messages...">
+          </div>
+          <div class="conversation-tabs">
+            <button class="conversation-tab active" data-tab="all">All</button>
+            <button class="conversation-tab" data-tab="unread">Unread</button>
+            <button class="conversation-tab" data-tab="alumni">Alumni</button>
+          </div>
+        </div>
+        <div class="conversations">
+          <div class="conversation-item active" data-id="1">
+            <div class="conversation-avatar">
+              <img src="images/avatar-1.jpg" alt="Sarah Johnson">
+              <span class="status-indicator online"></span>
+            </div>
+            <div class="conversation-info">
+              <div class="conversation-header">
+                <h3>Sarah Johnson</h3>
+                <span class="conversation-time">10:30 AM</span>
+              </div>
+              <p class="conversation-role">Software Engineer at Google</p>
+              <p class="conversation-preview">Thanks for reaching out! I'd be happy to chat about internship opportunities.</p>
+            </div>
+            <span class="conversation-badge">1</span>
+          </div>
+          <div class="conversation-item" data-id="2">
+            <div class="conversation-avatar">
+              <img src="images/avatar-2.jpg" alt="Michael Chen">
+            </div>
+            <div class="conversation-info">
+              <div class="conversation-header">
+                <h3>Michael Chen</h3>
+                <span class="conversation-time">Yesterday</span>
+              </div>
+              <p class="conversation-role">Product Manager at Microsoft</p>
+              <p class="conversation-preview">Let me know if you have any other questions about product management.</p>
+            </div>
+          </div>
+          <div class="conversation-item" data-id="3">
+            <div class="conversation-avatar">
+              <img src="images/avatar-3.jpg" alt="Priya Patel">
+              <span class="status-indicator online"></span>
+            </div>
+            <div class="conversation-info">
+              <div class="conversation-header">
+                <h3>Priya Patel</h3>
+                <span class="conversation-time">Yesterday</span>
+              </div>
+              <p class="conversation-role">Data Scientist at Amazon</p>
+              <p class="conversation-preview">I'll send you some resources about data science career paths.</p>
+            </div>
+          </div>
+          <div class="conversation-item" data-id="4">
+            <div class="conversation-avatar">
+              <img src="images/avatar-4.jpg" alt="David Kim">
+            </div>
+            <div class="conversation-info">
+              <div class="conversation-header">
+                <h3>David Kim</h3>
+                <span class="conversation-time">Monday</span>
+              </div>
+              <p class="conversation-role">UX Designer at Apple</p>
+              <p class="conversation-preview">Have you checked out the design workshop next week?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div class="chat-area" id="chatArea">
+        <div class="chat-header">
+          <button class="back-to-conversations" id="backButton">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <div class="chat-user">
+            <div class="chat-avatar">
+              <img src="images/avatar-1.jpg" alt="Sarah Johnson">
+              <span class="status-indicator online"></span>
+            </div>
+            <div class="chat-user-info">
+              <h3>Sarah Johnson</h3>
+              <p>Software Engineer at Google</p>
+            </div>
+          </div>
+          <div class="chat-actions">
+            <button class="btn-icon" title="Video Call">
+              <i class="fas fa-video"></i>
+            </button>
+            <button class="btn-icon" title="Audio Call">
+              <i class="fas fa-phone-alt"></i>
+            </button>
+            <button class="btn-icon" title="More Options">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="message-date">Today</div>
+          <div class="message-item">
+            <div class="message-avatar">
+              <img src="images/avatar-1.jpg" alt="Sarah Johnson">
+            </div>
+            <div class="message-content">
+              <div class="message-bubble">
+                <p>Hi John, thanks for connecting! How can I help you today?</p>
+              </div>
+              <div class="message-time">10:15 AM</div>
+            </div>
+          </div>
+          <div class="message-item outgoing">
+            <div class="message-content">
+              <div class="message-bubble">
+                <p>Hi Sarah, thanks for accepting my connection request! I'm interested in learning more about software engineering internships at Google. Could you share some insights about the application process?</p>
+              </div>
+              <div class="message-time">10:20 AM</div>
+            </div>
+          </div>
+          <div class="message-item">
+            <div class="message-avatar">
+              <img src="images/avatar-1.jpg" alt="Sarah Johnson">
+            </div>
+            <div class="message-content">
+              <div class="message-bubble">
+                <p>Of course! I'd be happy to help. The internship application typically opens in September for the following summer. The process usually involves an online assessment followed by 1-2 technical interviews.</p>
+              </div>
+              <div class="message-time">10:25 AM</div>
+            </div>
+          </div>
+          <div class="message-item">
+            <div class="message-avatar">
+              <img src="images/avatar-1.jpg" alt="Sarah Johnson">
+            </div>
+            <div class="message-content">
+              <div class="message-bubble">
+                <p>I'd recommend strengthening your algorithm and data structure skills. LeetCode and HackerRank are great resources for practice.</p>
+              </div>
+              <div class="message-time">10:26 AM</div>
+            </div>
+          </div>
+          <div class="message-item">
+            <div class="message-avatar">
+              <img src="images/avatar-1.jpg" alt="Sarah Johnson">
+            </div>
+            <div class="message-content">
+              <div class="message-bubble">
+                <p>Thanks for reaching out! I'd be happy to chat about internship opportunities.</p>
+              </div>
+              <div class="message-time">10:30 AM</div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input">
+          <div class="input-actions">
+            <button class="btn-icon" title="Attach File">
+              <i class="fas fa-paperclip"></i>
+            </button>
+            <button class="btn-icon" title="Send Image">
+              <i class="fas fa-image"></i>
+            </button>
+          </div>
+          <div class="message-input-container">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button class="emoji-btn" title="Add Emoji">
+              <i class="far fa-smile"></i>
+            </button>
+          </div>
+          <button class="btn-send" id="sendButton" title="Send Message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState">
+        <div class="empty-state-icon">
+          <i class="fas fa-comment-dots"></i>
+        </div>
+        <h2>Your Messages</h2>
+        <p>Connect with alumni through direct messages. Select a conversation to start chatting.</p>
+        <div class="empty-state-hint">
+          <i class="fas fa-arrow-left"></i> Select a conversation from the left
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <h3>AlumniLink</h3>
+          </div>
+          <p>Connecting students with alumni for mentorship, career guidance, and opportunities.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="discover.html">Discover Alumni</a></li>
+            <li><a href="jobs.html">Jobs & Internships</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="hackathons.html">Hackathons</a></li>
+            <li><a href="alumni-map.html">Alumni Map</a></li>
+            <li><a href="help.html">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="copyright">© 2023 AlumniLink. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/messages.js"></script>
+</body>
+</html>
