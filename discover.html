@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Alumni - AlumniLink</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/discover.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">A</div>
+                    <h1>AlumniLink</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="discover.html" class="active">Discover</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <button class="btn btn-text message-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                    </button>
+                    <div class="user-avatar">JS</div>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="discover-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Discover <span class="highlight">Amazing Alumni</span></h1>
+                    <p>Connect with alumni from your college working in your field of interest. Build meaningful relationships and unlock new opportunities.</p>
+                    <div class="search-container">
+                        <div class="search-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search alumni by name, company, role..." id="searchInput">
+                        </div>
+                        <button class="btn btn-primary search-btn">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-blob"></div>
+                    <img src="/placeholder.svg?height=400&width=400" alt="Alumni Network" class="floating-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="discover-grid">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="section-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        <button class="btn btn-text clear-filters">Clear All</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="filter-section">
+                            <h4>Domain</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" value="tech">
+                                    <span class="checkmark"></span>
+                                    Technology
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="finance">
+                                    <span class="checkmark"></span>
+                                    Finance
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="marketing">
+                                    <span class="checkmark"></span>
+                                    Marketing
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="design">
+                                    <span class="checkmark"></span>
+                                    Design
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="product">
+                                    <span class="checkmark"></span>
+                                    Product
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="data">
+                                    <span class="checkmark"></span>
+                                    Data Science
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h4>Graduation Year</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" value="2020">
+                                    <span class="checkmark"></span>
+                                    2020
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="2019">
+                                    <span class="checkmark"></span>
+                                    2019
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="2018">
+                                    <span class="checkmark"></span>
+                                    2018
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="2017">
+                                    <span class="checkmark"></span>
+                                    2017
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="2016">
+                                    <span class="checkmark"></span>
+                                    2016
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h4>Location</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" value="sf">
+                                    <span class="checkmark"></span>
+                                    San Francisco
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="ny">
+                                    <span class="checkmark"></span>
+                                    New York
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="seattle">
+                                    <span class="checkmark"></span>
+                                    Seattle
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="chicago">
+                                    <span class="checkmark"></span>
+                                    Chicago
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="remote">
+                                    <span class="checkmark"></span>
+                                    Remote
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary apply-filters-btn">
+                            <i class="fas fa-check"></i>
+                            Apply Filters
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Results Section -->
+            <main class="results-section">
+                <div class="results-header">
+                    <div class="results-count">
+                        <h2>Alumni Directory <span>(248 found)</span></h2>
+                        <p>Connect with amazing alumni from your network</p>
+                    </div>
+                    <div class="results-controls">
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                        <div class="sort-dropdown">
+                            <select id="sortSelect">
+                                <option value="name">Sort by Name</option>
+                                <option value="year">Graduation Year</option>
+                                <option value="company">Company</option>
+                                <option value="location">Location</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alumni Grid -->
+                <div class="alumni-grid" id="alumniGrid">
+                    <!-- Alumni Card 1 -->
+                    <div class="alumni-card" data-aos="fade-up">
+                        <div class="alumni-info">
+                            <div class="alumni-avatar">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Sarah Johnson">
+                            </div>
+                            <div class="alumni-details">
+                                <h3>Sarah Johnson</h3>
+                                <p class="alumni-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    Software Engineer at Google
+                                </p>
+                                <p class="alumni-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    San Francisco, CA
+                                </p>
+                                <p class="alumni-education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Class of 2019
+                                </p>
+                                <div class="alumni-tags">
+                                    <span class="tag">Tech</span>
+                                    <span class="tag">AI</span>
+                                    <span class="tag">Web Development</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-action connect-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Connect
+                            </button>
+                            <button class="btn-action message-btn">
+                                <i class="fas fa-envelope"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alumni Card 2 -->
+                    <div class="alumni-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="alumni-info">
+                            <div class="alumni-avatar">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Michael Chen">
+                            </div>
+                            <div class="alumni-details">
+                                <h3>Michael Chen</h3>
+                                <p class="alumni-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    Product Manager at Microsoft
+                                </p>
+                                <p class="alumni-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Seattle, WA
+                                </p>
+                                <p class="alumni-education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Class of 2018
+                                </p>
+                                <div class="alumni-tags">
+                                    <span class="tag">Product</span>
+                                    <span class="tag">UX</span>
+                                    <span class="tag">Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-action connect-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Connect
+                            </button>
+                            <button class="btn-action message-btn">
+                                <i class="fas fa-envelope"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alumni Card 3 -->
+                    <div class="alumni-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="alumni-info">
+                            <div class="alumni-avatar">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Priya Patel">
+                            </div>
+                            <div class="alumni-details">
+                                <h3>Priya Patel</h3>
+                                <p class="alumni-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    Data Scientist at Amazon
+                                </p>
+                                <p class="alumni-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    New York, NY
+                                </p>
+                                <p class="alumni-education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Class of 2020
+                                </p>
+                                <div class="alumni-tags">
+                                    <span class="tag">Data Science</span>
+                                    <span class="tag">Machine Learning</span>
+                                    <span class="tag">Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-action connect-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Connect
+                            </button>
+                            <button class="btn-action message-btn">
+                                <i class="fas fa-envelope"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alumni Card 4 -->
+                    <div class="alumni-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="alumni-info">
+                            <div class="alumni-avatar">
+                                <img src="/placeholder.svg?height=80&width=80" alt="David Kim">
+                            </div>
+                            <div class="alumni-details">
+                                <h3>David Kim</h3>
+                                <p class="alumni-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    UX Designer at Apple
+                                </p>
+                                <p class="alumni-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Cupertino, CA
+                                </p>
+                                <p class="alumni-education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Class of 2017
+                                </p>
+                                <div class="alumni-tags">
+                                    <span class="tag">Design</span>
+                                    <span class="tag">UI/UX</span>
+                                    <span class="tag">Product</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-action connect-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Connect
+                            </button>
+                            <button class="btn-action message-btn">
+                                <i class="fas fa-envelope"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alumni Card 5 -->
+                    <div class="alumni-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="alumni-info">
+                            <div class="alumni-avatar">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Emily Wilson">
+                            </div>
+                            <div class="alumni-details">
+                                <h3>Emily Wilson</h3>
+                                <p class="alumni-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    Marketing Manager at Facebook
+                                </p>
+                                <p class="alumni-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Menlo Park, CA
+                                </p>
+                                <p class="alumni-education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Class of 2016
+                                </p>
+                                <div class="alumni-tags">
+                                    <span class="tag">Marketing</span>
+                                    <span class="tag">Social Media</span>
+                                    <span class="tag">Growth</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-action connect-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Connect
+                            </button>
+                            <button class="btn-action message-btn">
+                                <i class="fas fa-envelope"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alumni Card 6 -->
+                    <div class="alumni-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="alumni-info">
+                            <div class="alumni-avatar">
+                                <img src="/placeholder.svg?height=80&width=80" alt="James Rodriguez">
+                            </div>
+                            <div class="alumni-details">
+                                <h3>James Rodriguez</h3>
+                                <p class="alumni-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    Frontend Developer at Netflix
+                                </p>
+                                <p class="alumni-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Los Gatos, CA
+                                </p>
+                                <p class="alumni-education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Class of 2019
+                                </p>
+                                <div class="alumni-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">React</span>
+                                    <span class="tag">UI Development</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-action connect-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Connect
+                            </button>
+                            <button class="btn-action message-btn">
+                                <i class="fas fa-envelope"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn prev-btn" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <button class="pagination-number">4</button>
+                        <button class="pagination-number">5</button>
+                    </div>
+                    <button class="pagination-btn next-btn">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">A</div>
+                        <h3>AlumniLink</h3>
+                    </div>
+                    <p>Connecting students with alumni for mentorship, career guidance, and opportunities.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="discover.html">Discover Alumni</a></li>
+                        <li><a href="jobs.html">Jobs & Internships</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="hackathons.html">Hackathons</a></li>
+                        <li><a href="alumni-map.html">Alumni Map</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect With Us</h4>
+                    <p>Stay updated with the latest opportunities and events.</p>
+                    <div class="newsletter-signup">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AlumniLink. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Alumni Profile Modal -->
+    <div id="alumniModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="/placeholder.svg?height=120&width=120" alt="Alumni" id="modalAvatar">
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name" id="modalName">Alumni Name</h2>
+                        <p class="profile-role" id="modalRole">Role at Company</p>
+                        <p class="profile-location" id="modalLocation">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Location
+                        </p>
+                        <div class="profile-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-user-plus"></i>
+                                Connect
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-envelope"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="about">About</button>
+                    <button class="tab-btn" data-tab="experience">Experience</button>
+                    <button class="tab-btn" data-tab="projects">Projects</button>
+                </div>
+
+                <div class="tab-pane active" id="about">
+                    <h3>About</h3>
+                    <p>Passionate software engineer with 5+ years of experience in building scalable web applications. Expertise in React, Node.js, and cloud technologies.</p>
+                    
+                    <h4>Skills</h4>
+                    <div class="skills-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="experience">
+                    <h3>Experience</h3>
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="experience-details">
+                            <h4>Software Engineer - Google</h4>
+                            <span class="experience-date">2020 - Present</span>
+                            <p>Working on search algorithms and user experience improvements.</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="experience-details">
+                            <h4>Junior Developer - Startup Inc</h4>
+                            <span class="experience-date">2019 - 2020</span>
+                            <p>Developed full-stack web applications using modern technologies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="projects">
+                    <h3>Projects</h3>
+                    <div class="project-item">
+                        <h4>E-commerce Platform</h4>
+                        <p>Built a scalable e-commerce platform using React and Node.js with payment integration.</p>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <h4>Task Management App</h4>
+                        <p>Developed a collaborative task management application with real-time updates.</p>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/discover.js"></script>
+</body>
+</html>
