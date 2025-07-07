@@ -1,90 +1,104 @@
-CREATE DATABASE AlumniLinkDB;
-USE AlumniLinkDB;
+CREATE DATABASE IF NOT EXISTS AlumniInteractionDB;
+USE AlumniInteractionDB;
+-- Drop all tables if they exist (for clean re-run)
+DROP TABLE IF EXISTS Connections, RSVPs, Messages, Comments, Posts, Jobs, Events, Alumni, Users;
 
+-- Users table
 CREATE TABLE Users (
-    UserID INT AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(100) NOT NULL,
-    Email VARCHAR(100) UNIQUE NOT NULL,
-    Role ENUM('student', 'alumni', 'admin') DEFAULT 'student',
-    PasswordHash VARCHAR(255) NOT NULL,
-    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    role VARCHAR(50), -- e.g., 'student', 'alumni', 'admin'
+    profile_picture TEXT,
+    bio TEXT
 );
 
+-- Alumni table (One-to-One with Users)
 CREATE TABLE Alumni (
-    AlumniID INT PRIMARY KEY,
-    GraduationYear INT,
-    Degree VARCHAR(100),
-    Department VARCHAR(100),
-    CurrentCompany VARCHAR(100),
-    FOREIGN KEY (AlumniID) REFERENCES Users(UserID) ON DELETE CASCADE
+    alumni_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT UNIQUE,
+    graduation_year INT,
+    degree VARCHAR(100),
+    branch VARCHAR(100),
+    current_job_title VARCHAR(100),
+    company VARCHAR(100),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
+-- Posts table (One-to-Many with Users)
 CREATE TABLE Posts (
-    PostID INT AUTO_INCREMENT PRIMARY KEY,
-    UserID INT,
-    Title VARCHAR(200),
-    Content TEXT,
-    ImageURL VARCHAR(255),
-    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE CASCADE
+    post_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    content TEXT,
+    image_url TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
-CREATE TABLE Messages (
-    MessageID INT AUTO_INCREMENT PRIMARY KEY,
-    SenderID INT,
-    ReceiverID INT,
-    Content TEXT,
-    SentAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (SenderID) REFERENCES Users(UserID) ON DELETE CASCADE,
-    FOREIGN KEY (ReceiverID) REFERENCES Users(UserID) ON DELETE CASCADE
-);
-
-CREATE TABLE Events (
-    EventID INT AUTO_INCREMENT PRIMARY KEY,
-    Title VARCHAR(150),
-    Description TEXT,
-    Location VARCHAR(150),
-    EventDate DATE,
-    CreatedBy INT,
-    FOREIGN KEY (CreatedBy) REFERENCES Users(UserID) ON DELETE SET NULL
-);
-
-CREATE TABLE Jobs (
-    JobID INT AUTO_INCREMENT PRIMARY KEY,
-    Title VARCHAR(150),
-    CompanyName VARCHAR(150),
-    Description TEXT,
-    Location VARCHAR(100),
-    PostedBy INT,
-    PostedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (PostedBy) REFERENCES Users(UserID) ON DELETE SET NULL
-);
-
-CREATE TABLE Connections (
-    ConnectionID INT AUTO_INCREMENT PRIMARY KEY,
-    User1ID INT,
-    User2ID INT,
-    Status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
-    RequestedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (User1ID) REFERENCES Users(UserID) ON DELETE CASCADE,
-    FOREIGN KEY (User2ID) REFERENCES Users(UserID) ON DELETE CASCADE
-);
-
+-- Comments table (One-to-Many with Posts and Users)
 CREATE TABLE Comments (
-    CommentID INT AUTO_INCREMENT PRIMARY KEY,
-    PostID INT,
-    UserID INT,
-    Content TEXT,
-    CommentedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (PostID) REFERENCES Posts(PostID) ON DELETE CASCADE,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE CASCADE
+    comment_id INT PRIMARY KEY AUTO_INCREMENT,
+    post_id INT,
+    user_id INT,
+    comment_text TEXT,
+    commented_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES Posts(post_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
-CREATE TABLE Donations (
-    DonationID INT AUTO_INCREMENT PRIMARY KEY,
-    DonorID INT,
-    Amount DECIMAL(10, 2),
-    Message TEXT,
-    DonatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (DonorID) REFERENCES Users(UserID) ON DELETE SET NULL
+-- Messages table (Self-referencing One-to-Many with Users)
+CREATE TABLE Messages (
+    message_id INT PRIMARY KEY AUTO_INCREMENT,
+    sender_id INT,
+    receiver_id INT,
+    message_text TEXT,
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sender_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (receiver_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+
+-- Events table (One-to-Many with Users)
+CREATE TABLE Events (
+    event_id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255),
+    description TEXT,
+    event_date DATE,
+    location VARCHAR(255),
+    created_by INT,
+    FOREIGN KEY (created_by) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+
+-- RSVPs table (One-to-Many with Users and Events)
+CREATE TABLE RSVPs (
+    rsvp_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    event_id INT,
+    response ENUM('yes', 'no', 'maybe') DEFAULT 'yes',
+    responded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (event_id) REFERENCES Events(event_id) ON DELETE CASCADE
+);
+
+-- Jobs table (One-to-Many with Users)
+CREATE TABLE Jobs (
+    job_id INT PRIMARY KEY AUTO_INCREMENT,
+    posted_by INT,
+    title VARCHAR(255),
+    description TEXT,
+    location VARCHAR(100),
+    posted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (posted_by) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+
+-- Connections table (Many-to-Many using junction table with Users)
+CREATE TABLE Connections (
+    connection_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id_1 INT,
+    user_id_2 INT,
+    status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
+    requested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id_1) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id_2) REFERENCES Users(user_id) ON DELETE CASCADE,
+    CONSTRAINT unique_connection_pair UNIQUE (user_id_1, user_id_2)
 );
